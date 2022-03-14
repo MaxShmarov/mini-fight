@@ -4,16 +4,14 @@ using UnityEngine;
 
 namespace MiniFight.Factory
 {
-    [CreateAssetMenu(fileName = "Tile factory", menuName = "Configs/New tile factory")]
+    [CreateAssetMenu(fileName = "Tile factory", menuName = "Factories/New tile factory")]
     public class GameTileViewFactory : ScriptableObject, IGameTileViewFactory
     {
         [SerializeField] private GameTileView[] _prefabs;
 
         public IGameTileView Create(Transform parentTransform)
         {
-            var index = Random.Range(0, _prefabs.Length);
-
-            return Instantiate(_prefabs[index], parentTransform);
+            return Instantiate(_prefabs.GetRandomElement(), parentTransform);
         }
     }
 }

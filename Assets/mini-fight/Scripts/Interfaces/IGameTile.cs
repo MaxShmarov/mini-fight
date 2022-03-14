@@ -6,7 +6,7 @@ namespace MiniFight.Interfaces
     {
         Vector2Int Position { get; }
         IGameTileView View { get; }
-
+        bool Occupied { get; set; }
         void Initialize(IGameTileView view);
     }
 }

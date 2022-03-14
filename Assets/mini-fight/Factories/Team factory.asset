@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66bfc2663bee8944dbc705ba6ef79be4, type: 3}
-  m_Name: Field factory
+  m_Script: {fileID: 11500000, guid: ec42ef9b2fe4cdb4990e8205f71d5352, type: 3}
+  m_Name: Team factory
   m_EditorClassIdentifier: 
-  _fieldConfig: {fileID: 11400000, guid: 099ee998daedc7944a3513c9cce42168, type: 2}
-  _viewFactory: {fileID: 11400000, guid: 91e73ab943115374792df72de54691ee, type: 2}
+  _maxMembersCount: 3
+  _factory: {fileID: 11400000, guid: 91003783037905f4bb50485442f86240, type: 2}

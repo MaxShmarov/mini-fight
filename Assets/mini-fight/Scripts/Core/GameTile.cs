@@ -10,6 +10,7 @@ namespace MiniFight.Core
         public Vector2Int Position => _position;
 
         public IGameTileView View { get; private set; }
+        public bool Occupied { get; set; }
 
         public GameTile(int x, int y)
         {

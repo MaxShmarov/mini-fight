@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e1e87bcda3a6844cb80d42ceaf3ba45, type: 3}
+  m_Name: Fighter factory
+  m_EditorClassIdentifier: 
+  _prefabs:
+  - {fileID: 5529073501316627709, guid: 1fc086418dc6d804a8780979a36b2989, type: 3}
+  - {fileID: -5744000858213215706, guid: 9da6d77d335c88d4187a3f556f6d8607, type: 3}
+  - {fileID: -1221068662424053270, guid: 22df30e0c81cd0548a91b3605d9aa3d5, type: 3}
