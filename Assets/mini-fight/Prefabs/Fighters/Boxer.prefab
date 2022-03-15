@@ -307,3 +307,5 @@ MonoBehaviour:
   _moveSpeed: 0.5
   _attackRadius: 0.5
   _attackPower: 2
+  _maxHealth: 10
+  _view: {fileID: 2966087620490790122}

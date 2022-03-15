@@ -4,7 +4,10 @@ namespace MiniFight.Interfaces
 {
     public interface IMoveable
     {
-        public float MoveSpeed { get; }
-        void MoveTo(Transform transform, Vector2Int position);
+        Transform Transform { get; }
+        float MoveSpeed { get; }
+        ITarget Target { get; set; }
+
+        void Move();
     }
 }

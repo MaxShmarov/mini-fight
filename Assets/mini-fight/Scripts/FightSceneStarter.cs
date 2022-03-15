@@ -9,7 +9,7 @@ namespace MiniFight
     {
         [SerializeField] private GameFieldFactory _factory;
         [SerializeField] private TeamFactory _teamFactory;
-        [SerializeField] private FightLoop fightLoop;
+        [SerializeField] private FightSystem fightLoop;
         [SerializeField] private CameraController _camera;
 
         private void Start()

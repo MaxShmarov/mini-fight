@@ -2,6 +2,6 @@ namespace MiniFight.Interfaces
 {
     public interface IStrategySelector
     {
-        void Select(ITeam team);
+        IStrategy Select(ITeam team);
     }
 }

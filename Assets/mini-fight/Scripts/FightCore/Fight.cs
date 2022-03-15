@@ -41,7 +41,13 @@ namespace MiniFight.FightCore
         {
             for(int i = 0; i < _teams.Length; i++)
             {
-                _strategySelector.Select(_teams[i]);
+                var strategy = _strategySelector.Select(_teams[i]);
+
+                if (_teams.Length == 1) { continue; }
+
+                var enemyIndex = i + 1 == _teams.Length ? 0 : i + 1;
+
+                strategy.SetEnemy(_teams[enemyIndex]);
             }
         }
 

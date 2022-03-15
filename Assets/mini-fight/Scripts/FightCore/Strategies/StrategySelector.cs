@@ -5,11 +5,9 @@ namespace MiniFight.FightCore.Strategies
 {
     public class StrategySelector : IStrategySelector
     {
-        public void Select(ITeam team)
+        public IStrategy Select(ITeam team)
         {
-            var randomValue = Random.Range(0, 1);
-
-            if (randomValue > 0.5f)
+            if (Random.value > 0.5f)
             {
                 team.Strategy = new PersonalGoalStrategy();
             }
@@ -17,6 +15,8 @@ namespace MiniFight.FightCore.Strategies
             {
                 team.Strategy = new CommonGoalStragegy();
             }
+
+            return team.Strategy;
         }
     }
 }

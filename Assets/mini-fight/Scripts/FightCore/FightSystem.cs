@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MiniFight.FightCore
 {
-    public class FightLoop : MonoBehaviour
+    public class FightSystem : MonoBehaviour
     {
         private IFight _fight;
 

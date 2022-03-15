@@ -21,6 +21,7 @@ namespace MiniFight.Core
             {
                 if (i < spawnPositions.Length)
                 {
+                    Members[i].Init();
                     Members[i].Transform.SetPosition(spawnPositions[i]);
                     Members[i].Transform.rotation = Quaternion.Euler(rotation);
                 }

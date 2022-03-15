@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bfc2663bee8944dbc705ba6ef79be4, type: 3}
   m_Name: Field factory
   m_EditorClassIdentifier: 
-  _width: 7
-  _height: 5
+  _width: 30
+  _height: 20
   _viewFactory: {fileID: 11400000, guid: 91e73ab943115374792df72de54691ee, type: 2}
