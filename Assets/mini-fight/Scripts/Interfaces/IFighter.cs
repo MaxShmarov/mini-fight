@@ -13,7 +13,7 @@ namespace MiniFight.Interfaces
         public IAttacker Attacker { get; }
         bool IsAlive { get; }
 
-        public void Init();
+        public void Init(Color teamColor);
         public void SetTarget(ITarget target);
         public void ChangeMoveable(IMoveable moveable);
         public void ChangeAttacker(IAttacker attacker);

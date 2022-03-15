@@ -17,7 +17,7 @@ namespace MiniFight.Factory
             if (_parent == null)
                 _parent = new GameObject("Members");
 
-            var team = new Team(name, _maxMembersCount);
+            var team = new Team(name, _maxMembersCount, Random.ColorHSV());
 
             for (int i = 0; i < team.Members.Length; i++)
             {

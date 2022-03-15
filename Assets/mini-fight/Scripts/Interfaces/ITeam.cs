@@ -8,6 +8,7 @@ namespace MiniFight.Interfaces
         event Action<ITeam, int> AliveMembersCountChanged;
 
         string Name { get; }
+        Color Color { get; }
         int AliveMembersCount { get; }
         IFighter[] Members { get; }
         IStrategy Strategy { get; set; }

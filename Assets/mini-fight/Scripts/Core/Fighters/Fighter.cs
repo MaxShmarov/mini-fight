@@ -20,9 +20,12 @@ namespace MiniFight.Core.Fighters
         [SerializeField, Range(0, 2)] protected float _attackPower;
         [SerializeField, Range(10, 50)] protected float _maxHealth;
         [SerializeField] protected GameObject _view;
+        [SerializeField] protected MeshRenderer _tagTeam;
 
-        public virtual void Init()
+        public virtual void Init(Color teamColor)
         {
+            _tagTeam.material.color = teamColor;
+
             Health = _maxHealth;
         }
 

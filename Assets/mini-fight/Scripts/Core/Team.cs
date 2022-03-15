@@ -8,13 +8,15 @@ namespace MiniFight.Core
     {
         public event Action<ITeam, int> AliveMembersCountChanged;
         public string Name { get; }
+        public Color Color { get; }
         public int AliveMembersCount { get; private set; }
         public IFighter[] Members { get; private set; }
         public IStrategy Strategy { get; set; }
 
-        public Team(string name, int membersCount)
+        public Team(string name, int membersCount, Color color)
         {
             Name = name;
+            Color = color;
             Members = new IFighter[membersCount];
         }
 
@@ -24,7 +26,7 @@ namespace MiniFight.Core
             {
                 if (i < spawnPositions.Length)
                 {
-                    Members[i].Init();
+                    Members[i].Init(Color);
                     Members[i].Transform.SetPosition(spawnPositions[i]);
                     Members[i].Transform.rotation = Quaternion.Euler(rotation);
                     Members[i].Died += OnMemberDied;
