@@ -12,6 +12,8 @@ namespace MiniFight.Core.Fighters
         [SerializeField, Range(10, 50)] protected float _maxHealth;
         [SerializeField] protected GameObject _view;
 
+        public event Action<IFighter> Died;
+
         public Guid Id { get; set; }
         public float Health { get; protected set; }
         public IMoveable Moveable { get; protected set; }
@@ -40,7 +42,11 @@ namespace MiniFight.Core.Fighters
             Health -= damage;
 
             if (Health <= 0)
+            {
+                Died?.Invoke(this);
+
                 Destroy(_view);
+            }
         }
 
         public void SetTarget(ITarget target)

@@ -5,6 +5,8 @@ namespace MiniFight.Interfaces
 {
     public interface IFighter
     {
+        event Action<IFighter> Died;
+
         public Guid Id { get; set; }
         public Transform Transform { get; }
         public IMoveable Moveable { get; }

@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _factory: {fileID: 11400000, guid: eb3303eb0b8874441b81271ed8578a26, type: 2}
   _teamFactory: {fileID: 11400000, guid: 90ac52671fccb0c4d8b3230df8be73e0, type: 2}
-  fightLoop: {fileID: 2097176039}
+  _fightSystem: {fileID: 2097176039}
   _camera: {fileID: 9634781}
 --- !u!4 &398948195
 Transform:

@@ -9,7 +9,7 @@ namespace MiniFight
     {
         [SerializeField] private GameFieldFactory _factory;
         [SerializeField] private TeamFactory _teamFactory;
-        [SerializeField] private FightSystem fightLoop;
+        [SerializeField] private FightSystem _fightSystem;
         [SerializeField] private CameraController _camera;
 
         private void Start()
@@ -19,10 +19,7 @@ namespace MiniFight
             var teamRadiant = _teamFactory.Create("Radiant");
             var teamDire = _teamFactory.Create("Dire");
 
-            var fight = new Fight(field, new ITeam[] { teamRadiant, teamDire });
-            fight.Prepare();
-
-            fightLoop.Initialize(fight);
+            _fightSystem.Initialize(field, new ITeam[] { teamRadiant, teamDire });
 
             _camera.SetStartingPosition(field);
         }

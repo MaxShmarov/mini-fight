@@ -1,9 +1,12 @@
+using System;
+
 namespace MiniFight.Interfaces
 {
-    public interface IFight
+    public interface IFight : IDisposable
     {
+        event Action<IFightResult> Ended;
+
         void Prepare();
         void Update();
-        void End();
     }
 }
