@@ -17,5 +17,6 @@ namespace MiniFight.Interfaces
         public void SetTarget(ITarget target);
         public void ChangeMoveable(IMoveable moveable);
         public void ChangeAttacker(IAttacker attacker);
+        void DestroyThis();
     }
 }

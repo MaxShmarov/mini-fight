@@ -9,7 +9,7 @@ namespace MiniFight.Core
         public event Action<ITeam, int> AliveMembersCountChanged;
         public string Name { get; }
         public int AliveMembersCount { get; private set; }
-        public IFighter[] Members { get; }
+        public IFighter[] Members { get; private set; }
         public IStrategy Strategy { get; set; }
 
         public Team(string name, int membersCount)
@@ -51,13 +51,16 @@ namespace MiniFight.Core
             Strategy?.Update(this);
         }
 
-        public void Dispose()
+        public void Reset()
         {
             for (int i = 0; i < Members.Length; i++)
             {
                 Members[i].Died -= OnMemberDied;
+                Members[i].DestroyThis();
             }
 
+            Members = null;
+            Strategy = null;
             AliveMembersCount = 0;
         }
     }

@@ -2,11 +2,14 @@ using System;
 
 namespace MiniFight.Interfaces
 {
-    public interface IFight : IDisposable
+    public interface IFight
     {
         event Action<IFightResult> Ended;
 
-        void Prepare();
+        bool IsActive { get; }
+        void Prepare(ITeam[] teams);
+        void Start();
         void Update();
+        void Reset();
     }
 }

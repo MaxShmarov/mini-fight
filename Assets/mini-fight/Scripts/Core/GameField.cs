@@ -51,7 +51,7 @@ namespace MiniFight.Core
             }
         }
 
-        public void Dispose()
+        public void Reset()
         {
             for (int i = 0; i < _field.GetLength(0); i++)
             {

@@ -6,14 +6,7 @@ namespace MiniFight.Core.Fighters
 {
     public abstract class Fighter : MonoBehaviour, IFighter, ITarget, IDamageable
     {
-        [SerializeField, Range(0, 2)] protected float _moveSpeed;
-        [SerializeField, Range(0, 2)] protected float _attackRadius;
-        [SerializeField, Range(0, 2)] protected float _attackPower;
-        [SerializeField, Range(10, 50)] protected float _maxHealth;
-        [SerializeField] protected GameObject _view;
-
         public event Action<IFighter> Died;
-
         public Guid Id { get; set; }
         public float Health { get; protected set; }
         public IMoveable Moveable { get; protected set; }
@@ -21,6 +14,12 @@ namespace MiniFight.Core.Fighters
         public Transform Transform => transform;
         public bool IsAlive => Health > 0;
         public bool IsAvailable => IsAlive;
+
+        [SerializeField, Range(0, 2)] protected float _moveSpeed;
+        [SerializeField, Range(0, 2)] protected float _attackRadius;
+        [SerializeField, Range(0, 2)] protected float _attackPower;
+        [SerializeField, Range(10, 50)] protected float _maxHealth;
+        [SerializeField] protected GameObject _view;
 
         public virtual void Init()
         {
@@ -53,6 +52,11 @@ namespace MiniFight.Core.Fighters
         {
             Attacker.Target = target;
             Moveable.Target = target;
+        }
+
+        public void DestroyThis()
+        {
+            Destroy(gameObject);
         }
     }
 }

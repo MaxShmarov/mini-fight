@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace MiniFight.Interfaces
 {
-    public interface ITeam : IDisposable
+    public interface ITeam
     {
         event Action<ITeam, int> AliveMembersCountChanged;
 
@@ -14,5 +14,6 @@ namespace MiniFight.Interfaces
 
         void Spawn(Vector2Int[] spawnPositions, Vector3 rotation);
         void Update();
+        void Reset();
     }
 }

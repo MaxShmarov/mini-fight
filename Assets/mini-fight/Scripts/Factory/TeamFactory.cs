@@ -10,15 +10,19 @@ namespace MiniFight.Factory
         [SerializeField, Range(1, 5)] private int _maxMembersCount;
         [SerializeField] FighterFactory _factory;
 
+        private GameObject _parent;
+
         public ITeam Create(string name)
         {
-            var parent = new GameObject(name);
+            if (_parent == null)
+                _parent = new GameObject("Members");
+
             var team = new Team(name, _maxMembersCount);
 
             for (int i = 0; i < team.Members.Length; i++)
             {
                 team.Members[i] = _factory.Create();
-                team.Members[i].Transform.SetParent(parent.transform);
+                team.Members[i].Transform.SetParent(_parent.transform);
             }
 
             return team;

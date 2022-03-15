@@ -6,12 +6,12 @@ namespace MiniFight.FightCore.Strategies
     {
         public ITeam Enemy { get; protected set; }
 
+        public abstract void Update(ITeam team);
+
         public virtual void SetEnemy(ITeam enemy)
         {
             Enemy = enemy;
         }
-
-        public abstract void Update(ITeam team);
 
         protected void MakeAction(IFighter fighter)
         {
